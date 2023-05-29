@@ -57,14 +57,13 @@ public class Main
 	{
 		int outOfSupport = 2005;
 		int oldPhoneCotOffPoint = 2015;
-		Phone phone = new Phone(3, 2017);
+		Phone phone = new Phone(1, 2017);
 
 		if (phone.getDeviceYear() < outOfSupport || phone.getDeviceOS() == null)
 		{
 			System.out.println("Упс! Похоже, ваш телефон не поддерживается :(");
-			return;
 		}
-		if (phone.getDeviceYear() < oldPhoneCotOffPoint)
+		else if (phone.getDeviceYear() < oldPhoneCotOffPoint)
 		{
 			System.out.printf("Установите облегченную версию приложения для %s по ссылке\n", phone.getDeviceOS());
 		}
