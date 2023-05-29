@@ -8,7 +8,7 @@ public class Phone
 		this._clientDeviceYear = clientDeviceYear;
 	}
 
-	public String GetDeviceOS()
+	public String getDeviceOS()
 	{
 		switch (this._osId)
 		{
@@ -20,9 +20,8 @@ public class Phone
 				return null;
 		}
 	}
-	public int GetDeviceYear()
+	public int getDeviceYear()
 	{
 		return _clientDeviceYear;
 	}
 }
-

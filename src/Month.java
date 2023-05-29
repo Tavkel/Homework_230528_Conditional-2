@@ -1,6 +1,6 @@
 public class Month
 {
-	public static String GetMonthName(int id)
+	public static String getMonthName(int id)
 	{
 		switch (id)
 		{

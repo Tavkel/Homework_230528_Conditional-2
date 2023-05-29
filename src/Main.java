@@ -34,18 +34,18 @@ public class Main
 		int oldPhoneCotOffPoint = 2015;
 		Phone phone = new Phone(3, 2017);
 
-		if (phone.GetDeviceYear() < outOfSupport || phone.GetDeviceOS() == null)
+		if (phone.getDeviceYear() < outOfSupport || phone.getDeviceOS() == null)
 		{
 			System.out.println("Упс! Похоже, ваш телефон не поддерживается :(");
 			return;
 		}
-		if (phone.GetDeviceYear() < oldPhoneCotOffPoint)
+		if (phone.getDeviceYear() < oldPhoneCotOffPoint)
 		{
-			System.out.printf("Установите облегченную версию приложения для %s по ссылке\n", phone.GetDeviceOS());
+			System.out.printf("Установите облегченную версию приложения для %s по ссылке\n", phone.getDeviceOS());
 		}
 		else
 		{
-			System.out.printf("Установите версию приложения для %s по ссылке\n", phone.GetDeviceOS());
+			System.out.printf("Установите версию приложения для %s по ссылке\n", phone.getDeviceOS());
 		}
 	}
 
@@ -137,16 +137,16 @@ public class Main
 		switch (monthNumber)
 		{
 			case 1: case 2: case 12:
-				System.out.println(Month.GetMonthName(monthNumber) + " - зимний месяц");
+				System.out.println(Month.getMonthName(monthNumber) + " - зимний месяц");
 				break;
 			case 3: case 4: case 5:
-				System.out.println(Month.GetMonthName(monthNumber) + " - весенний месяц");
+				System.out.println(Month.getMonthName(monthNumber) + " - весенний месяц");
 				break;
 			case 6: case 7: case 8:
-				System.out.println(Month.GetMonthName(monthNumber) + " - летний месяц");
+				System.out.println(Month.getMonthName(monthNumber) + " - летний месяц");
 				break;
 			case 9: case 10: case 11:
-				System.out.println(Month.GetMonthName(monthNumber) + " - осенний месяц");
+				System.out.println(Month.getMonthName(monthNumber) + " - осенний месяц");
 				break;
 			default:
 				System.out.println("Нет такого месяца");
