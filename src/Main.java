@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class Main
 {
 	public static void main(String[] args)
@@ -13,7 +15,9 @@ public class Main
 		task3(year);
 
 		System.out.println("\nЗадача 4");
-		int deliveryDistance = 60;
+		var random = new Random();
+		int deliveryDistance = random.nextInt(120);
+		System.out.println("randomly generated delivery distance: " + deliveryDistance);
 		task4(deliveryDistance);
 
 		System.out.println("\nЗадача 5");
@@ -118,27 +122,21 @@ public class Main
 		if (deliveryDistance <= firstLimit)
 		{
 			System.out.println("Доставка займет " + deliveryTime + " день");
-			return;
 		}
-		deliveryTime +=1;
-		if (isInRange(deliveryDistance, firstLimit, secondLimit))
+		else if (deliveryDistance <= secondLimit)
 		{
+			deliveryTime +=1;
 			System.out.println("Доставка займет " + deliveryTime + " дня");
-			return;
 		}
-		deliveryTime +=1;
-		if (isInRange(deliveryDistance, secondLimit, thirdLimit))
+		else if (deliveryDistance <= thirdLimit)
 		{
+			deliveryTime +=2;
 			System.out.println("Доставка займет " + deliveryTime + " дня");
 		}
 		else
 		{
 			System.out.println("Слишком далеко, доставки нет.");
 		}
-	}
-	public static boolean isInRange(int number, int lowerLimit, int upperLimit)
-	{
-		return lowerLimit <= number && number <=upperLimit;
 	}
 
 	//Задача 5
