@@ -2,7 +2,9 @@ public class Main
 {
 	public static void main(String[] args)
 	{
-		System.out.println("Task 1 omitted due to it essentially being a part of task 2");
+		System.out.println("Задача 1");
+		task1();
+
 		System.out.println("\nЗадача 2");
 		task2();
 
@@ -17,6 +19,29 @@ public class Main
 		System.out.println("\nЗадача 5");
 		int monthNumber = 5;
 		task5(monthNumber);
+	}
+
+	//Задача 1
+	//У банка появилось мобильное приложение. Поэтому теперь, когда пользователь заходит на сайт с телефона, ему предлагается скачать приложение с учетом того, какая операционная система у пользователя.
+	//
+	//Напишите программу, которая определяет, чем пользуется клиент (iOS или Android), и выдает соответствующее сообщение:
+	//
+	//Для iOS — «Установите версию приложения для iOS по ссылке».
+	//Для Android — «Установите версию приложения для Android по ссылке».
+	//Объявите переменную clientOS, которая равна 0 или 1 (0 — iOS, 1 — Android).
+	public static void task1()
+	{
+		int osId = 0;
+
+		var phone = new Phone(osId); //Существует ли в Джаве возможность задать дефолтное значение для аргумента? Или прописать его в конструкотре - норм? (речь про поле clientDeviceYear)
+		if (phone.getDeviceOS() == null)
+		{
+			System.out.println("Упс! Похоже, ваш телефон не поддерживается :(");
+		}
+		else
+		{
+			System.out.printf("Установите версию приложения для %s по ссылке\n", phone.getDeviceOS());
+		}
 	}
 
 	//Задача 2
