@@ -9,7 +9,7 @@ public class Main
 		task2();
 
 		System.out.println("\nЗадача 3");
-		int year = 3072;
+		int year = 1201;
 		task3(year);
 
 		System.out.println("\nЗадача 4");
@@ -86,17 +86,7 @@ public class Main
 		int leapYearException = 100;
 		int leapYearExceptionOverride = 400;
 
-		if (year % leapYearExceptionOverride == 0)
-		{
-			System.out.printf("%s год - високосный\n", year);
-			return;
-		}
-		if (year % leapYearException == 0)
-		{
-			System.out.printf("%s год - не високосный\n", year);
-			return;
-		}
-		if(year % leapYearPeriod == 0)
+		if(year % leapYearPeriod == 0 && year % leapYearException != 0 || year % leapYearExceptionOverride == 0)
 		{
 			System.out.printf("%s год - високосный\n", year);
 		}
