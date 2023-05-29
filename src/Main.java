@@ -90,7 +90,7 @@ public class Main
 		int leapYearException = 100;
 		int leapYearExceptionOverride = 400;
 
-		if(year % leapYearPeriod == 0 && year % leapYearException != 0 || year % leapYearExceptionOverride == 0)
+		if (year % leapYearPeriod == 0 && year % leapYearException != 0 || year % leapYearExceptionOverride == 0)
 		{
 			System.out.printf("%s год - високосный\n", year);
 		}
@@ -125,12 +125,12 @@ public class Main
 		}
 		else if (deliveryDistance <= secondLimit)
 		{
-			deliveryTime +=1;
+			deliveryTime += 1;
 			System.out.println("Доставка займет " + deliveryTime + " дня");
 		}
 		else if (deliveryDistance <= thirdLimit)
 		{
-			deliveryTime +=2;
+			deliveryTime += 2;
 			System.out.println("Доставка займет " + deliveryTime + " дня");
 		}
 		else
@@ -148,16 +148,24 @@ public class Main
 	{
 		switch (monthNumber)
 		{
-			case 1: case 2: case 12:
+			case 1:
+			case 2:
+			case 12:
 				System.out.println(Month.getMonthName(monthNumber) + " - зимний месяц");
 				break;
-			case 3: case 4: case 5:
+			case 3:
+			case 4:
+			case 5:
 				System.out.println(Month.getMonthName(monthNumber) + " - весенний месяц");
 				break;
-			case 6: case 7: case 8:
+			case 6:
+			case 7:
+			case 8:
 				System.out.println(Month.getMonthName(monthNumber) + " - летний месяц");
 				break;
-			case 9: case 10: case 11:
+			case 9:
+			case 10:
+			case 11:
 				System.out.println(Month.getMonthName(monthNumber) + " - осенний месяц");
 				break;
 			default:
